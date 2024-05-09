@@ -32,6 +32,7 @@ class Value:
 
         return out
 
+    # __pow()__ changed to calculate the derivation of both Exponent and base
     def __pow__(self, other):
         assert isinstance(other, (int, float)), "only supporting int/float powers for now"
         out = Value(self.data**other, (self,), f'**{other}')
